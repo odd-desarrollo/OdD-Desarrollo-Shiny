@@ -1,0 +1,12 @@
+name: appf
+title: appf
+username:
+account: oddapp
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 739324
+bundleId: 1899340
+url: https://oddapp.shinyapps.io/appf/
+when: 1551133938.422
+asMultiple: FALSE
+asStatic: FALSE
