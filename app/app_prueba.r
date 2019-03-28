@@ -9,15 +9,13 @@ library(leaflet)
 library(shinythemes)
 library(dplyr)
 library(raster)
-install.packages("sf")
+
 library(sf) ## multipolygon
-install.packages("mapview")
 library(mapview)#mouse
-install.packages("rmapshaper")
 library(rmapshaper)
 library(htmlTable)
 
-#cargar archivo para el menú
+#cargar archivo para el menÃº
 menu=read.csv("menus.csv", sep = ";")
 
 #cargar bases
@@ -32,24 +30,24 @@ load("smoking.df.Rdata")
 Groupnames <- c("Area protegida", "Area de conservacion", "Bosque","Vertedero", "Relleno")
 
 
-#Ubicación de cuadros
+#UbicaciÃ³n de cuadros
 
-loc="C:/Users/Observatorio/Desktop/app/cuadros_prueba.xlsx" #CAMBIAR UBICACIÓN
+loc="C:/Users/odd/Desktop/git/OdD-Desarrollo-Shiny/app/cuadros_prueba.xlsx" #CAMBIAR UBICACIÃ“N
 
 ui <- navbarPage(title = "App MINAE",#Titulo de la App
-                 navbarPage(title = "Menú",#Esto genera un menu de navegacion
-                            tabPanel(title = "Cuadros y Gráficos",#Primera pestana del menu
+                 navbarPage(title = "MenÃº",#Esto genera un menu de navegacion
+                            tabPanel(title = "Cuadros y GrÃ¡ficos",#Primera pestana del menu
                                      sidebarPanel(
                                        selectInput(inputId = "cat",#titulos amarillos en el anexo estadistico (ARCHIVO PDF)
-                                                   label = "Seleccione una categoría:",
+                                                   label = "Seleccione una categorÃ­a:",
                                                    #c("",levels(...)) funciona para que no aparezca preseleccionada ninguna opcion 
                                                    choices = c("",levels(menu$categoria)),
                                                    selected= NULL,
                                                    multiple = F),
                                        br(),
-                                       uiOutput("seg_sel"), #segunda selección
+                                       uiOutput("seg_sel"), #segunda selecciÃ³n
                                        br(), 
-                                       uiOutput("ter_sel") #tercera selección
+                                       uiOutput("ter_sel") #tercera selecciÃ³n
                                        
                                      ),
                                      mainPanel(
@@ -81,11 +79,11 @@ server <- function(input, output, session) {
   #segunda seleccion
   output$seg_sel <- renderUI({
     selectInput(inputId = "subcat",
-                label = "Seleccione una sub-categoría:",
+                label = "Seleccione una sub-categorÃ­a:",
                 choices = menu$sub.categoria[menu$categoria %in% input$cat],
                 selected = NULL,
                 multiple = F)})
-  #tercera selección
+  #tercera selecciÃƒÂ³n
   output$ter_sel <- renderUI({
     selectInput(inputId = "var",
                 label = "Seleccione una variable:",
@@ -97,7 +95,7 @@ server <- function(input, output, session) {
   ID<-reactive({
     nombres=excel_sheets(loc)#obtener nombres de las hojas 
     leven_dist<-adist(x = input$var,y = excel_sheets(loc)) #https://bit.ly/2TWGe9z
-    return(which.min(leven_dist))#la distancia mínima indica el par de nombres más similar
+    return(which.min(leven_dist))#la distancia mÃ­nima indica el par de nombres mÃƒÂ¡s similar
   })
   
   #Cuadros
@@ -113,8 +111,8 @@ server <- function(input, output, session) {
     req(input$var)
     id<-ID()
     if(id==1){
-      p <- plot_ly(data=read_excel(loc,sheet = id), x = ~Año, y = ~Precipitación, name = 'Precipitación', type = 'scatter', mode = 'lines+markers') %>%
-        add_trace(y = ~Evapotranspiración, name = 'Evapotranspiración', mode = 'lines+markers') 
+      p <- plot_ly(data=read_excel(loc,sheet = id), x = ~AÃ±o, y = ~PrecipitaciÃ³n, name = 'PrecipitaciÃ³n', type = 'scatter', mode = 'lines+markers') %>%
+        add_trace(y = ~EvapotranspiraciÃ³n, name = 'EvapotranspiraciÃ³n', mode = 'lines+markers') 
       return(p)
     }
     if(id==2){

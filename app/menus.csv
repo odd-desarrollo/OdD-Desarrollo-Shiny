@@ -1,11 +1,20 @@
-categoria;sub-categoria;variable
-Condiciones y calidad ambiental;Condiciones Físicas;Precipitación y Evapotranspiración
-Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Superficie forestal como proporción de la superficie total
-Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Índice de la lista Roja
-Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Cambio en la extensión de los ecosistemas relacionados con el agua a lo largo del tiempo
-Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Cobertura de las zonas protegidas en relación con las zonas marinas
-Calidad ambiental;Calidad del aire;Concentraciones de óxido de nitrógeno
-Calidad ambiental;Calidad del aire;Concentraciones de partículas suspendidas
-Calidad ambiental;Calidad del aire;Concentraciones de plomo
-Calidad ambiental;Calidad del aire;Partículas PM10
-Calidad ambiental;Calidad del aire;Partículas PM2.5
+categoria;sub-categoria;variable;;;;;;;;;
+Condiciones y calidad ambiental;Condiciones Físicas;Precipitación y Evapotranspiración;;;;;;;;;
+Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Superficie forestal como proporción de la superficie total;;;;;;;;;
+Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Índice de la lista Roja;;;;;;;;;
+Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Cambio en extensión de los ecosistemas relacionados con el agua a lo largo del tiempo 2008-2011;;;;;;;;;
+Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Cambio en extensión de los ecosistemas relacionados con el agua a lo largo del tiempo 2012-2013;;;;;;;;;
+Condiciones y calidad ambiental;Cobertura terrestre, ecosistemas y biodiversidad ;Cobertura de las zonas protegidas en relación con las zonas marinas;;;;;;;;;
+Calidad ambiental;Calidad del aire;Concentraciones de óxido de nitrógeno;;;;;;;;;
+Calidad ambiental;Calidad del aire;Concentraciones de partículas suspendidas;;;;;;;;;
+Calidad ambiental;Calidad del aire;Concentraciones de plomo;;;;;;;;;
+Calidad ambiental;Calidad del aire;Partículas PM10;;;;;;;;;
+Calidad ambiental;Calidad del aire;Partículas PM2.5;;;;;;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
